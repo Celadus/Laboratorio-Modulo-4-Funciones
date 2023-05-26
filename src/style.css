@@ -140,4 +140,10 @@ button:focus-visible {
   box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
   margin: 30px;
 }
- 
+.bottone button:hover {
+  border-color: #646cff;
+}
+.bottone button:focus,
+.bottone button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

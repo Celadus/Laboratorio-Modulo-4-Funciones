@@ -1,20 +1,30 @@
+let counterDisplayElem = document.querySelector(".numero-turno");
+let counterMinusElem = document.getElementById(".indietro");
+let counterResetElem = document.getElementById(".rest");
+let counterPlusElem = document.getElementById("avanti");
 
-/*
-<body>
+let contatore=0;
 
-<h1>JavaScript is powerful</h1>
+updateDisplay();
 
-<p>JavaScript can change the HTML element:</p>
+counterPlusElem.addEventListener("click",()=>{
+ contatore=contatore+1;
+ updateDisplay();
+});
 
-<button type="button" onclick="myFunction()">Click Me!</button>
 
-<p id="power_of_javascript_demo">The power of Javascript.</p>
+counterResetElem.addEventListener("click",()=>{
+    contatore=0;
+    updateDisplay();
+  });
 
-<script>
-function myFunction() { 
-    document.getElementById("power_of_javascript_demo").innerHTML = "JavaScript, you're powerful!";
-}
-</script>
 
-</body>
-</html> */
+counterMinusElem.addEventListener("click",()=>{
+  contatore=contatore-1;
+  updateDisplay();
+});
+
+function updateDisplay(){
+    counterDisplayElem.innerHTML=contatore;
+};
+

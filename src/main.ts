@@ -1,30 +1,31 @@
-let counterDisplayElem = document.querySelector(".numero-turno");
-let counterMinusElem = document.getElementById(".indietro");
-let counterResetElem = document.getElementById(".rest");
-let counterPlusElem = document.getElementById("avanti");
 
-let contatore=0;
+  let counterDisplayElem = document.querySelector(".numero-turno");
+  let counterMinusElem = document.querySelector(".indietro");
+  let counterResetElem = document.querySelector(".reset");
+  let counterPlusElem = document.querySelector(".avanti");
 
-updateDisplay();
+  let contatore = 1;
 
-counterPlusElem.addEventListener("click",()=>{
- contatore=contatore+1;
- updateDisplay();
-});
+  updateDisplay();
 
-
-counterResetElem.addEventListener("click",()=>{
-    contatore=0;
+  counterPlusElem.addEventListener("click", () => {
+    contatore = contatore + 1;
     updateDisplay();
   });
 
+  counterResetElem.addEventListener("click", () => {
+    contatore = 0;
+    updateDisplay();
+  });
 
-counterMinusElem.addEventListener("click",()=>{
-  contatore=contatore-1;
-  updateDisplay();
-});
+  counterMinusElem.addEventListener("click", () => {
+    contatore = contatore - 1;
+    updateDisplay();
+  });
 
-function updateDisplay(){
-    counterDisplayElem.innerHTML=contatore;
-};
+  function updateDisplay() {
+    counterDisplayElem.textContent = contatore.toString().padStart(2, "0");
+  }
+
+
 

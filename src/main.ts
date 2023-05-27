@@ -1,8 +1,8 @@
 
-  let counterDisplayElem = document.querySelector(".numero-turno");
-  let counterMinusElem = document.querySelector(".indietro");
-  let counterResetElem = document.querySelector(".reset");
-  let counterPlusElem = document.querySelector(".avanti");
+  let counterDisplayElem = (document.querySelector(".numero-turno")as HTMLInputElement);
+  let counterMinusElem = (document.querySelector(".indietro")as HTMLInputElement);
+  let counterResetElem = (document.querySelector(".reset")as HTMLInputElement);
+  let counterPlusElem = (document.querySelector(".avanti")as HTMLInputElement);
 
   let contatore = 1;
 

@@ -19,7 +19,9 @@
   });
 
   counterMinusElem.addEventListener("click", () => {
-    contatore = contatore - 1;
+    if (contatore > 1) {
+      contatore = contatore - 1;
+    }
     updateDisplay();
   });
 
